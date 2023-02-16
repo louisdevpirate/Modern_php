@@ -1,13 +1,11 @@
 <?php
 
+use Carbon\Carbon;
+
 require "vendor/autoload.php";
 
-$instance = new App\Calcul();
+$aujourdhui = Carbon::now();
 
-$resultat = $instance->additionner(3, 4);
-
-var_dump($resultat);
-
-echo 'Hello World !';
+var_dump($aujourdhui->format('d/m/Y'));
 
 
